@@ -5,11 +5,11 @@
     "vendor": "",
     "aliases":
     [
-        "Easymeter",
+        "EASY",
 
     ],
     "parentRequirements": [],
     "childRequirements": [],
     "implemented": [],
-    "prefix": "EAS"
+    "prefix": "EASY"
 }
