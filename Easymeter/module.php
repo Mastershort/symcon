@@ -34,20 +34,14 @@
         }
         }
         public function ReceiveData($JSONString)
-    {
-        $data = json_decode($JSONString);
-        //IPS_LogMessage("ReceiveData", utf8_decode($data->Buffer));
-       $bufferdata = $this->GetBuffer('Buffer');
-      $data = $bufferdata.utf8_decode($data->Buffer);
+		{
+			$data = json_decode($JSONString);
+			       IPS_LogMessage("IOSplitter RECV", utf8_decode($data->Buffer));
+			           //We would parse our payload here before sending it further...
+			            //Lets just forward to our children
+			$this->SendDataToChildren(json_encode(Array("DataID" => "{66164EB8-3439-4599-B937-A365D7A68567}", "Buffer" => $data->Buffer)));
+		}
 
-        //$this->SendDebug("Fetch", $data, 0);
-        /**
-        * Die folgenden Funktionen stehen automatisch zur Verfügung, wenn das Modul über die "Module Control" eingefügt wurden.
-        * Die Funktionen werden, mit dem selbst eingerichteten Prefix, in PHP und JSON-RPC wiefolgt zur Verfügung gestellt:
-        *
-        * ABC_MeineErsteEigeneFunktion($id);
-        *
-      */}
         public function MeineErsteEigeneFunktion() {
             // Selbsterstellter Code
         }
