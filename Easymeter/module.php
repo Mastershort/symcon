@@ -31,15 +31,15 @@
             case 1: //SerialPort
                 $this->ForceParent('{6DC3D946-0D31-450F-A8C6-C42DB8D7D4F1}');
                 break;
+
+                 $this->ConnectParent("{AC6C6E74-C797-40B3-BA82-F135D941D1A2}");
+
         }
         }
         public function ReceiveData($JSONString)
 		{
 			$data = json_decode($JSONString);
-			       IPS_LogMessage("IOSplitter RECV", utf8_decode($data->Buffer));
-			           //We would parse our payload here before sending it further...
-			            //Lets just forward to our children
-			$this->SendDataToChildren(json_encode(Array("DataID" => "{66164EB8-3439-4599-B937-A365D7A68567}", "Buffer" => $data->Buffer)));
+			       
 		}
 
         public function MeineErsteEigeneFunktion() {
