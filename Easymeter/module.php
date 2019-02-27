@@ -36,9 +36,9 @@
         public function ReceiveData($JSONString)
     {
         $data = json_decode($JSONString);
-        IPS_LogMessage("ReceiveData", utf8_decode($data->Buffer));
-       //$bufferdata = $this->GetBuffer('Buffer');
-      //  $data = $bufferdata.utf8_decode($data->Buffer);
+        //IPS_LogMessage("ReceiveData", utf8_decode($data->Buffer));
+       $bufferdata = $this->GetBuffer('Buffer');
+      $data = $bufferdata.utf8_decode($data->Buffer);
 
         //$this->SendDebug("Fetch", $data, 0);
         /**
