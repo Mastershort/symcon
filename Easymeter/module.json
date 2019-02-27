@@ -1,0 +1,15 @@
+{
+    "id": "{2E44BBA1-CB8A-567B-7754-C57A0DC8ABAF}",
+    "name": "Easymeter",
+    "type": 3,
+    "vendor": "",
+    "aliases":
+    [
+        "Easymeter",
+
+    ],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "EASY"
+}
