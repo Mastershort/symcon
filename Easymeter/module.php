@@ -36,8 +36,9 @@
         public function ReceiveData($JSONString)
     {
         $data = json_decode($JSONString);
-        $bufferdata = $this->GetBuffer('Buffer');
-        $data = $bufferdata.utf8_decode($data->Buffer);
+      //  $bufferdata = $this->GetBuffer('Buffer');
+      //  $data = $bufferdata.utf8_decode($data->Buffer);
+
         $this->SendDebug("Fetch", $data, 0);
         /**
         * Die folgenden Funktionen stehen automatisch zur Verfügung, wenn das Modul über die "Module Control" eingefügt wurden.
